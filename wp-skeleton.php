@@ -1,5 +1,7 @@
 <?php
 /**
+ * @package WpPluginSkeleton
+ *
  * Plugin Name: PLUGIN_NAME
  * Description: PLUGIN_DESCRIPTION
  * URI: PLUGIN_URI

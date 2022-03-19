@@ -2,6 +2,11 @@
 
 namespace WpPluginSkeleton;
 
+/**
+ * Class Activate
+ *
+ * @package WpPluginSkeleton
+ */
 class Activate {
 
 	/**
