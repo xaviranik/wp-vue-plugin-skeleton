@@ -2,6 +2,8 @@
 
 namespace WpPluginSkeleton;
 
+use WpPluginSkeleton\Admin\Menu;
+
 /**
  * Main plugin class.
  *
@@ -76,6 +78,8 @@ class WpPluginSkeleton {
 	public function __construct() {
 		$this->init();
 		$this->register_lifecycle();
+
+		add_action( 'plugins_loaded', [ $this, 'load_classes' ] );
 	}
 
 	/**
@@ -92,6 +96,16 @@ class WpPluginSkeleton {
 		self::$plugin_url            = plugins_url( '', self::$plugin_file );
 		self::$assets_url            = self::$plugin_url . '/assets';
 		self::$build_url             = self::$plugin_url . '/build';
+	}
+
+	/**
+	 * Bootstraps the plugin. Load all necessary providers.
+	 *
+	 * @return void
+	 */
+	public static function load_classes() {
+		$menu = new Menu();
+		$menu->register_hooks();
 	}
 
 	/**

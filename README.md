@@ -17,5 +17,6 @@ Note: The following search & replace should be performed in the order they are l
   - `WP_SKELETON_PLUGIN_DIR`: Your plugin directory constant
   - `user/wp-plugin-skeleton`: Your Composer Vendor Name
   - `user@test.com`: Your Composer Vendor Email
+  - `wp-plugin-skeleton`: Your Text Domain
 
 ### 2. Run `composer install`
