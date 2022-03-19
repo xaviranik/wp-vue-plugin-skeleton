@@ -1,0 +1,1 @@
+{"version":3,"file":"main.css","mappings":";;;AACA;EACC;AAAD,C","sources":["webpack://wp-vue-plugin-skeleton/./src/App.vue"],"sourcesContent":["\nh1 {\n\tcolor: red;\n}\n"],"names":[],"sourceRoot":""}

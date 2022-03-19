@@ -1,0 +1,41 @@
+{
+  "name": "wp-vue-plugin-skeleton",
+  "version": "1.0.0",
+  "description": "A robust skeleton for WordPress-Vue.js plugins.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xaviranik/wp-vue-plugin-skeleton.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xaviranik/wp-vue-plugin-skeleton/issues"
+  },
+  "homepage": "https://github.com/xaviranik/wp-vue-plugin-skeleton#readme",
+  "dependencies": {
+	"vue": "^3.2.31"
+  },
+  "devDependencies": {
+	"@wordpress/scripts": "^22.2.1",
+	"vue-loader": "^17.0.0"
+  },
+  "scripts": {
+    "build": "wp-scripts build --entry ./src/index.js",
+    "start": "wp-scripts start --entry ./src/index.js",
+    "format:src": "wp-scripts format ./src",
+    "check-engines": "wp-scripts check-engines",
+    "check-licenses": "wp-scripts check-licenses",
+    "format": "wp-scripts format",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "lint:md:docs": "wp-scripts lint-md-docs",
+    "lint:md:js": "wp-scripts lint-md-js",
+    "lint:pkg-json": "wp-scripts lint-pkg-json",
+    "packages-update": "wp-scripts packages-update",
+    "plugin-zip": "wp-scripts plugin-zip",
+    "start:hot": "wp-scripts start --hot",
+    "test:e2e": "wp-scripts test-e2e",
+    "test:unit": "wp-scripts test-unit-js"
+  }
+}

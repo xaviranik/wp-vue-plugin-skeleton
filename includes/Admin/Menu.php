@@ -140,7 +140,7 @@ class Menu {
 
 		wp_register_script(
 			'wp-skeleton-main-script',
-			WpPluginSkeleton::$build_url . '/index.js',
+			WpPluginSkeleton::$build_url . '/main.js',
 			$asset['dependencies'],
 			$asset['version'],
 			false
