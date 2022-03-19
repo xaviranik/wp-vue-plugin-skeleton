@@ -1,10 +1,10 @@
 {
-    "name": "user/wp-vue-plugin-skeleton",
+    "name": "user/wp-plugin-skeleton",
     "description": "PLUGIN_DESCRIPTION",
     "license": "GPL2 or later",
     "autoload": {
         "psr-4": {
-            "User\\WpVuePluginSkeleton\\": "includes/"
+            "WpPluginSkeleton\\": "includes/"
         }
     },
     "authors": [

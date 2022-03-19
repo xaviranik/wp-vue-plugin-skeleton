@@ -1,13 +1,13 @@
 <?php
 
-namespace User\WpVuePluginSkeleton;
+namespace WpPluginSkeleton;
 
 /**
  * Main plugin class.
  *
- * @package User\WpVuePluginSkeleton
+ * @package User\WpPluginSkeleton
  */
-class WpVuePluginSkeleton {
+class WpPluginSkeleton {
 
 	/**
 	 * Plugin version.
@@ -71,7 +71,7 @@ class WpVuePluginSkeleton {
 	public static $plugin_url;
 
 	/**
-	 * WpVuePluginSkeleton Constructor.
+	 * WpPluginSkeleton Constructor.
 	 */
 	public function __construct() {
 		$this->init();
@@ -84,8 +84,8 @@ class WpVuePluginSkeleton {
 	 * @return void
 	 */
 	protected function init() {
-		self::$plugin_file           = WP_VUE_SKELETON_PLUGIN_FILE;
-		self::$plugin_directory      = WP_VUE_SKELETON_PLUGIN_DIR;
+		self::$plugin_file           = WP_SKELETON_PLUGIN_FILE;
+		self::$plugin_directory      = WP_SKELETON_PLUGIN_DIR;
 		self::$basename              = plugin_basename( self::$plugin_file );
 		self::$text_domain_directory = self::$plugin_directory . '/languages';
 		self::$template_directory    = self::$plugin_directory . '/templates';
@@ -106,12 +106,12 @@ class WpVuePluginSkeleton {
 
 
 	/**
-	 * Initializes the WpVuePluginSkeleton class.
+	 * Initializes the WpPluginSkeleton class.
 	 *
-	 * Checks for an existing WpVuePluginSkeleton instance
+	 * Checks for an existing WpPluginSkeleton instance
 	 * and if it doesn't find one, creates it.
 	 *
-	 * @return WpVuePluginSkeleton
+	 * @return WpPluginSkeleton
 	 */
 	public static function instance() {
 		static $instance = false;

@@ -1,6 +1,6 @@
 <?php
 
-namespace User\WpVuePluginSkeleton;
+namespace WpPluginSkeleton;
 
 class Activate {
 
