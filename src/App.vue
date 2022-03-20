@@ -1,18 +1,18 @@
 <template>
-	<div class="wp-skeleton">
-		<h1>Hello World</h1>
-	</div>
+  <div class="wp-skeleton">
+    <h1>Hello World</h1>
+  </div>
 </template>
 
 <script>
 export default {
-	name: 'App',
-	data() {
-		return {
-			message: 'Hello from the AppComponent'
-		}
-	}
-}
+    name: 'App',
+    data () {
+        return {
+            message: 'Hello from the AppComponent'
+        };
+    }
+};
 </script>
 
 <style lang="scss">
