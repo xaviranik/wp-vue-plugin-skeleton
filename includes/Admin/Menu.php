@@ -176,7 +176,7 @@ class Menu {
 	 * @return void
 	 */
 	public function cleanup_admin_notices() {
-		if ( 'toplevel_page_we-meal' === get_current_screen()->id ) {
+		if ( "toplevel_page_$this->menu_slug" === get_current_screen()->id ) {
 			remove_all_actions( 'admin_notices' );
 		}
 	}

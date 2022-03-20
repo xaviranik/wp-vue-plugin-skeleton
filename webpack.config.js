@@ -12,5 +12,5 @@ module.exports = {
         ...defaultModule,
         rules: [ ...defaultRules, { test: /\.vue$/, use: 'vue-loader' } ],
     },
-    plugins: [ ...defaultPlugins, new VueLoaderPlugin(), new webpack.DefinePlugin({ __VUE_OPTIONS_API__: false, __VUE_PROD_DEVTOOLS__: false, }) ],
+    plugins: [ ...defaultPlugins, new VueLoaderPlugin(), new webpack.DefinePlugin({ __VUE_OPTIONS_API__: true, __VUE_PROD_DEVTOOLS__: true, }) ],
 };

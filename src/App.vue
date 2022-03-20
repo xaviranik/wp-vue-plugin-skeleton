@@ -1,6 +1,6 @@
 <template>
   <div class="wp-skeleton">
-    <h1>Hello World</h1>
+    <h1>Hey, {{ message }}</h1>
   </div>
 </template>
 
@@ -17,6 +17,6 @@ export default {
 
 <style lang="scss">
 h1 {
-	color: red;
+	color: purple;
 }
 </style>
