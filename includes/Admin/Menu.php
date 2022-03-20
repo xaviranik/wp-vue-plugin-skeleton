@@ -73,11 +73,10 @@ class Menu {
 	 * @since 1.0.0
 	 */
 	public function __construct() {
-		$this->page_title      = __( 'weMeal', 'wp-plugin-skeleton' );
-		$this->menu_title      = __( 'weMeal', 'wp-plugin-skeleton' );
-		$this->base_capability = 'read';
-		$this->capability      = 'manage_meal';
-		$this->menu_slug       = 'we-meal';
+		$this->page_title      = __( 'Wp Skeleton', 'wp-plugin-skeleton' );
+		$this->menu_title      = __( 'Wp Skeleton', 'wp-plugin-skeleton' );
+		$this->base_capability = 'manage_options';
+		$this->menu_slug       = 'wp-skeleton';
 		$this->icon            = 'dashicons-rest-api';
 		$this->position        = 57;
 		$this->submenus        = [
@@ -88,7 +87,7 @@ class Menu {
 			],
 			[
 				'title'      => __( 'Other', 'wp-plugin-skeleton' ),
-				'capability' => $this->capability,
+				'capability' => $this->base_capability,
 				'url'        => 'admin.php?page=' . $this->menu_slug . '#/other',
 			],
 		];
