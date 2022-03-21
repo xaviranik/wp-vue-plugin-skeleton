@@ -14,7 +14,8 @@
   },
   "homepage": "https://github.com/xaviranik/wp-vue-plugin-skeleton#readme",
   "dependencies": {
-	"vue": "^3.2.31"
+    "vue": "^3.2.31",
+    "vue-router": "^4.0.14"
   },
   "devDependencies": {
     "@wordpress/scripts": "^22.2.1",
