@@ -11872,6 +11872,45 @@ const router = (0,vue_router__WEBPACK_IMPORTED_MODULE_2__.createRouter)({
 
 /***/ }),
 
+/***/ "./src/utils/menu-fix.js":
+/*!*******************************!*\
+  !*** ./src/utils/menu-fix.js ***!
+  \*******************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/**
+ * As we are using hash based navigation, hack fix
+ * to highlight the current selected menu
+ *
+ * requires jQuery
+ */
+const menuFix = slug => {
+  const $ = jQuery;
+  const menuRoot = $('#toplevel_page_' + slug);
+  const currentUrl = window.location.href;
+  const currentPath = currentUrl.substr(currentUrl.indexOf('admin.php'));
+  menuRoot.on('click', 'a', function () {
+    const self = $(this);
+    $('ul.wp-submenu li', menuRoot).removeClass('current');
+
+    if (self.hasClass('wp-has-submenu')) {
+      $('li.wp-first-item', menuRoot).addClass('current');
+    } else {
+      self.parents('li').addClass('current');
+    }
+  });
+  $('ul.wp-submenu a', menuRoot).each(function (index, el) {
+    if ($(el).attr('href') === currentPath) {
+      $(el).parent().addClass('current');
+    }
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (menuFix);
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-2.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[20].use[0]!./node_modules/source-map-loader/dist/cjs.js!./src/App.vue?vue&type=script&lang=js":
 /*!********************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-2.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[20].use[0]!./node_modules/source-map-loader/dist/cjs.js!./src/App.vue?vue&type=script&lang=js ***!
@@ -15977,15 +16016,19 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.runtime.esm-bundler.js");
 /* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./router */ "./src/router/index.js");
-/* harmony import */ var _App_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./App.vue */ "./src/App.vue");
+/* harmony import */ var _utils_menu_fix__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./utils/menu-fix */ "./src/utils/menu-fix.js");
+/* harmony import */ var _App_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./App.vue */ "./src/App.vue");
 
- // import the root component App from a single-file component.
+
+ // Import the root component App from a single-file component.
 
 
-const app = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createApp)(_App_vue__WEBPACK_IMPORTED_MODULE_2__["default"]);
-app.use(_router__WEBPACK_IMPORTED_MODULE_1__["default"]); // Mounting the vue app to the DOM
+const app = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createApp)(_App_vue__WEBPACK_IMPORTED_MODULE_3__["default"]);
+app.use(_router__WEBPACK_IMPORTED_MODULE_1__["default"]); // Mounting the vue app to the DOM.
 
-app.mount('#wp-plugin-skeleton');
+app.mount('#wp-plugin-skeleton'); // Fix menu by passing the menu slug
+
+(0,_utils_menu_fix__WEBPACK_IMPORTED_MODULE_2__["default"])('wp-skeleton');
 }();
 /******/ })()
 ;
